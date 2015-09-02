@@ -1,0 +1,36 @@
+<template name="profile">
+  <div class="medium-4 columns">
+    <form id="profile-form">
+      <fieldset>
+        <legend>Porfile</legend>
+        <label>Name
+          <input class="name" type="text" placeholder="your name..." maxlength="50">
+        </label>
+        <label>Desription
+          <input class="description" type="text" placeholder="about you...">
+        </label>
+        <label>avatar
+          <p>
+            <span>
+              <input multiple type="file" name="file" class="file fileInput"/>
+            </span>
+          </p>
+        </label>
+      </fieldset>
+      <button type="submit" form="profile-form" class="small right button radius" value="guardar">Guardar</button> 
+    </form>
+  </div>
+
+  <div class="medium-4 columns">
+    <div class="profile-card card ">
+      <div class="card-divider">
+        <img src="{{avatarImage}}" alt="Yeti">
+      </div>
+      <div class="profile-info">
+        <h4 class="subheader profile-name">Tu nombre - {{avatarImage.url}}</h4>
+        <p class="profile-email">{{userEmail}}</p>
+        <p class="profile-description">Una breve descripcion de tu persona </p>
+      </div>
+    </div>
+  </div>
+</template>
